@@ -40,6 +40,11 @@ def dnaToAscii(dstr):
                 f_list.append(a)
         f_joined = " ".join(str(n) for n in f_list)
         print(f_joined)
+        fwrite(f_joined)
+
+def fwrite(dnaascii):
+        with open("cipher.txt",'w',encoding = 'utf-8') as f:
+                f.write(dnaascii)
 
 s = input("Enter your secret messege: ")
 stringtobin(s)
