@@ -1,7 +1,8 @@
+from bz2 import compress
 from contextlib import nullcontext
 from multiprocessing.context import assert_spawning
 from turtle import clear
-
+import gzip
 #function to convert input string to ascii and then to binary
 def stringtobin(s):
         #converting string to ascii list
@@ -40,14 +41,23 @@ def dnaToAscii(dstr):
                 f_list.append(a)
         f_joined = " ".join(str(n) for n in f_list)
         print(f_joined)
-        fwrite(f_joined)
+        #fwrite(f_joined)
+        compression(f_joined)
 
+#writes the ciphertext to a text file
 def fwrite(dnaascii):
-        with open("cipher.txt",'w',encoding = 'utf-8') as f:
+        with open("cipher.txt",'wb') as f:
                 f.write(dnaascii)
+                f.close()
+
+def compression(ascString):
+        compressed_value = gzip.compress(bytes(ascString, 'utf-8'))
+        print(compressed_value)
+        fwrite(compressed_value)
 
 s = input("Enter your secret messege: ")
 stringtobin(s)
+
 
 
 
