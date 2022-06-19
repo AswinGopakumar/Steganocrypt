@@ -4,7 +4,7 @@ from turtle import clear
 
 #function to convert input string to ascii and then to binary
 def stringtobin(s):
-        #converting string to ascii
+        #converting string to ascii list
         alist = [ord(c) for c in s] 
         print(alist)
         #converting ascii to binary string
@@ -38,7 +38,8 @@ def dnaToAscii(dstr):
         for a in da_list:
                 a = a*factor
                 f_list.append(a)
-        print(f_list)
+        f_joined = " ".join(str(n) for n in f_list)
+        print(f_joined)
 
 s = input("Enter your secret messege: ")
 stringtobin(s)
