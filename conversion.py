@@ -5,6 +5,7 @@ from turtle import clear
 import gzip
 import AESenc
 import binascii
+import Steganography
 # function to convert input string to ascii and then to binary
 
 
@@ -81,3 +82,12 @@ compr = compression(dToA)
 filewrite = fwrite(compr)
 
 AESenc.encryption()
+
+
+sourceImg = "D:\\Steganocrypt\\Original_image\\hut.png"
+destImg = "D:\\Steganocrypt\\Output_image\\steg.png"
+with open('encrypted.bin','rb') as f:
+    message = f.read()
+    f.close()
+hexmessage = message.hex()
+Steganography.Encode(sourceImg,hexmessage,destImg)

@@ -35,11 +35,4 @@ def Encode(src, message, dest):
         enc_img = Image.fromarray(array.astype('uint8'), img.mode)
         enc_img.save(dest)
         print("Image Encoded Successfully")
-
-sourceImg = "D:\\Steganocrypt\\Original_image\\hut.png"
-destImg = "D:\\Steganocrypt\\Output_image\\steg.png"
-with open('encrypted.bin','rb') as f:
-    message = f.read()
-    f.close()
-hexmessage = message.hex()
-Encode(sourceImg,hexmessage,destImg)
+        return None
