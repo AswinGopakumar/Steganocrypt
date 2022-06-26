@@ -15,11 +15,9 @@ def stringtobin(s):
     print(alist)
     # converting ascii to binary string
     binstr = ""
-    ltob = [bin(list_item)[2:] for list_item in alist]
-    for list_item in ltob:
-        if len(list_item) % 2 != 0:
-            list_item = "0"+list_item
-            binstr = binstr + list_item
+    for i in alist:
+        bin = format(i,'08b')
+        binstr = binstr+bin
     print("binary string :", binstr)
     return binstr
 
