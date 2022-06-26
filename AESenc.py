@@ -34,4 +34,5 @@ def encryption():
     file_out.write(cipher.iv)
     file_out.write(ciphered_data)
     file_out.close()
+    print("cipher_data",cipher.iv.hex()+"  "+ciphered_data.hex())
     return None

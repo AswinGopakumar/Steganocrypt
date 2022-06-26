@@ -4,6 +4,7 @@ from multiprocessing.context import assert_spawning
 from turtle import clear
 import gzip
 import AESenc
+import binascii
 # function to convert input string to ascii and then to binary
 
 
@@ -68,7 +69,7 @@ def fwrite(dnaascii):
 
 def compression(ascString):
     compressed_value = gzip.compress(bytes(ascString, 'utf-8'))
-    print("compression :", compressed_value)
+    print("compression :", compressed_value.hex()) #converts byte to hex
     return compressed_value
 
 
