@@ -7,3 +7,7 @@ tempCodeRunnerFile.python
 Steganocrypt.code-workspace
 cipher.txt
 encrypted.bin
+__pycache__
+Output_image/steg.png
+cipher.txt
+encrypted.bin
