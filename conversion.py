@@ -1,10 +1,5 @@
-from bz2 import compress
-from contextlib import nullcontext
-from multiprocessing.context import assert_spawning
-from turtle import clear
 import gzip
 import AESenc
-import binascii
 import Steganography
 # function to convert input string to ascii and then to binary
 
