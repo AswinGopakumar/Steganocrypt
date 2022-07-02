@@ -19,6 +19,10 @@ pip install -r requirements.txt
 - **Step 3:** Run conversion.py to encode the message 
 - **Step 4:** Run Decode.py to decode the message
 
+## Issues
+- The usb should be named "E" without quotes
+
+    eg. - ``` E:\\my_key.bin```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
